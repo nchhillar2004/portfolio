@@ -1,7 +1,9 @@
 import React from "react";
 import ThemeSwitch from "./ThemeSwitch";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import HomeRoute from "./routes/HomeRoute";
+import ArticlesRoute from "./routes/ArticlesRoute";
+import BlogsRoute from "./routes/BlogsRoute";
 
 export default function App() {
     const localTheme = localStorage.getItem("themeColor");
@@ -17,12 +19,12 @@ export default function App() {
     return (
         <div className={`${themeColor} lg:py-5 py-3`}>
             <div className="container min-h-[90vh] lg:py-4 lg:px-8 max-md:py-2 max-md:px-4 py-3 px-6 w-full rounded-xl border border-[var(--border)] bg-[var(--container-bg)]">
-                <header className="mb-4">
+                <header className="mb-5 space-y-4">
                     <div className="flex lg:flex-row flex-col">
-                        <h4>
-                            <a href="/">Nishant Chhillar</a>
-                        </h4>
-                        <div className="flex space-x-4 flex-1 items-center justify-end">
+                        <h1>
+                            <Link to="/">Nishant Chhillar</Link>
+                        </h1>
+                        <div className="flex space-x-4 flex-1 flex-wrap items-center justify-end">
                             <ThemeSwitch />
                             <select
                                 className="bg-[var(--container-bg)] outline-none p-1"
@@ -44,40 +46,61 @@ export default function App() {
                         </div>
                     </div>
                     <nav>
-                        <ul className="flex space-x-2">
+                        <ul className="flex flex-wrap">
                             <li>
-                                <a href="/about">about</a>
+                                <Link to="/#about">about</Link>
                             </li>
+                            <div className="dot">&middot;</div>
                             <li>
-                                <a href="/about">experience</a>
+                                <Link to="/#experience">experience</Link>
                             </li>
+                            <div className="dot">&middot;</div>
                             <li>
-                                <a href="/about">skills</a>
+                                <Link to="/#skills">skills</Link>
                             </li>
+                            <div className="dot">&middot;</div>
                             <li>
-                                <a href="/about">certifications</a>
+                                <Link to="/#certifications">
+                                    certifications
+                                </Link>
                             </li>
+                            <div className="dot">&middot;</div>
                             <li>
-                                <a href="/about">projects</a>
+                                <Link to="/#projects">projects</Link>
                             </li>
+                            <div className="dot">&middot;</div>
                             <li>
-                                <a href="/about">contact</a>
+                                <Link to="/#contact">contact</Link>
                             </li>
+                            <div className="dot">&middot;</div>
                             <li>
-                                <a href="/about">github</a>
+                                <Link to="/articles">articles</Link>
+                            </li>
+                            <div className="dot">&middot;</div>
+                            <li>
+                                <Link to="/blogs">blogs</Link>
+                            </li>
+                            <div className="dot">&middot;</div>
+                            <li>
+                                <Link to="https://github.com/nchhillar2004/">
+                                    github
+                                </Link>
                             </li>
                         </ul>
                     </nav>
                 </header>
-
-                <BrowserRouter>
+                <main className="min-h-[80vh]">
                     <Routes>
                         <Route path="/" element={<HomeRoute />} />
+                        <Route path="/articles" element={<ArticlesRoute />} />
+                        <Route path="/blogs" element={<BlogsRoute />} />
                     </Routes>
-                    <Routes>
-                        <Route path="/portfolio" element={<HomeRoute />} />
-                    </Routes>
-                </BrowserRouter>
+                </main>
+                <footer className="mt-5">
+                    <small className="text-zinc-400 leading-none dark:text-zinc-600 text-xs">
+                        &copy; 2024 - Nishant Chhillar
+                    </small>
+                </footer>
             </div>
         </div>
     );
