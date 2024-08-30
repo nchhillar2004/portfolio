@@ -6,7 +6,7 @@ export default function HomeRoute() {
         <>
             <div className="flex flex-wrap space-y-5">
                 <div className="flex w-full max-lg:space-y-5 lg:flex-row flex-col justify-between">
-                    <section className="lg:w-[45%] w-full">
+                    <section className="lg:w-[45%] w-full" id="about">
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Welcome!
@@ -40,7 +40,7 @@ export default function HomeRoute() {
                             </p>
                         </div>
                     </section>
-                    <section className="lg:w-[45%] w-full">
+                    <section className="lg:w-[45%] w-full" id="education">
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Education
@@ -66,7 +66,7 @@ export default function HomeRoute() {
                 </div>
 
                 <div className="flex w-full max-lg:space-y-5 lg:flex-row flex-col justify-between">
-                    <section className="lg:w-[45%] w-full">
+                    <section className="lg:w-[45%] w-full" id="skills">
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Technical Skills
@@ -105,7 +105,7 @@ export default function HomeRoute() {
                             </p>
                         </div>
                     </section>
-                    <section className="lg:w-[45%] w-full">
+                    <section className="lg:w-[45%] w-full" id="experience">
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Experience
@@ -153,16 +153,21 @@ export default function HomeRoute() {
                 </div>
 
                 <div className="flex w-full max-lg:space-y-5 lg:flex-row flex-col justify-between">
-                    <section className="lg:w-[45%] w-full">
+                    <section className="lg:w-[45%] w-full" id="projects">
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Projects
                         </h2>
                         <div className="content">
-                            <p></p>
+                            <p>
+                                Q & A website like StackOverflow: Next.js,
+                                TypeScript, Next-Auth, JWT, MongoDB Atlas,
+                                Shadcn/ui
+                            </p>
+                            <p>Amazon Clone: MERN stack</p>
                         </div>
                     </section>
-                    <section className="lg:w-[45%] w-full">
+                    <section className="lg:w-[45%] w-full" id="contact">
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Contact

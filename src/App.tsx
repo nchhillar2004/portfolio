@@ -3,7 +3,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import { Route, Routes, Link } from "react-router-dom";
 import HomeRoute from "./routes/HomeRoute";
 import ArticlesRoute from "./routes/ArticlesRoute";
-import BlogsRoute from "./routes/BlogsRoute";
+import ArticleId from "./routes/ArticleId";
 
 export default function App() {
     const localTheme = localStorage.getItem("themeColor");
@@ -48,29 +48,24 @@ export default function App() {
                     <nav>
                         <ul className="flex flex-wrap">
                             <li>
-                                <Link to="/#about">about</Link>
+                                <a href="/#about">about</a>
                             </li>
                             <div className="dot">&middot;</div>
                             <li>
-                                <Link to="/#experience">experience</Link>
+                                <a href="/#education">education</a>
                             </li>
                             <div className="dot">&middot;</div>
                             <li>
-                                <Link to="/#skills">skills</Link>
+                                <a href="/#skills">skills</a>
+                            </li>
+
+                            <div className="dot">&middot;</div>
+                            <li>
+                                <a href="/#experience">experience</a>
                             </li>
                             <div className="dot">&middot;</div>
                             <li>
-                                <Link to="/#certifications">
-                                    certifications
-                                </Link>
-                            </li>
-                            <div className="dot">&middot;</div>
-                            <li>
-                                <Link to="/#projects">projects</Link>
-                            </li>
-                            <div className="dot">&middot;</div>
-                            <li>
-                                <Link to="/#contact">contact</Link>
+                                <a href="/#contact">contact</a>
                             </li>
                             <div className="dot">&middot;</div>
                             <li>
@@ -78,11 +73,10 @@ export default function App() {
                             </li>
                             <div className="dot">&middot;</div>
                             <li>
-                                <Link to="/blogs">blogs</Link>
-                            </li>
-                            <div className="dot">&middot;</div>
-                            <li>
-                                <Link to="https://github.com/nchhillar2004/">
+                                <Link
+                                    to="https://github.com/nchhillar2004/"
+                                    target="_blank"
+                                >
                                     github
                                 </Link>
                             </li>
@@ -93,7 +87,10 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<HomeRoute />} />
                         <Route path="/articles" element={<ArticlesRoute />} />
-                        <Route path="/blogs" element={<BlogsRoute />} />
+                        <Route
+                            path="article/:articleId"
+                            element={<ArticleId />}
+                        />
                     </Routes>
                 </main>
                 <footer className="mt-5">
