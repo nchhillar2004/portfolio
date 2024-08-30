@@ -12,7 +12,7 @@ export default function ArticleId() {
         async function fetchMarkdown() {
             try {
                 const res = await fetch(
-                    `/articles/article-${params.articleId}.md`
+                    `https://nchhillar.vercel.app/articles/article-${params.articleId}.md`
                 );
                 const text = await res.text();
                 setMarkdown(text);
