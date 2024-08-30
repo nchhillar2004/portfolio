@@ -2,12 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --bg: whitesmoke;
+    --container-bg: white;
+    --color: black;
+    --border: rgb(185, 185, 185);
+    .blue {
+        --secondary-color: rgb(0, 0, 150);
+        --hover-bg: rgb(200, 200, 255);
+    }
+    .red {
+        --secondary-color: rgb(150, 0, 0);
+        --hover-bg: rgb(255, 200, 200);
+    }
+    .green {
+        --secondary-color: rgb(0, 150, 0);
+        --hover-bg: rgb(200, 255, 200);
+    }
+}
+
+[data-theme="dark"] {
+    --bg: rgb(20, 20, 20);
+    --container-bg: rgb(30, 30, 30);
+    --color: white;
+    --border: rgb(70, 70, 70);
+    .blue {
+        --secondary-color: rgb(100, 100, 255);
+        --hover-bg: rgb(0, 0, 60);
+    }
+    .red {
+        --secondary-color: rgb(255, 100, 100);
+        --hover-bg: rgb(60, 0, 0);
+    }
+    .green {
+        --secondary-color: rgb(100, 255, 100);
+        --hover-bg: rgb(0, 60, 0);
+    }
+}
+
 html,
 body {
     font-family: Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--color);
     font-size: 16px;
+    @screen md {
+        font-size: 17px;
+    }
+    @screen lg {
+        font-size: 18px;
+    }
 }
 
-h1, h2, h3, h4{
-    
+h1 {
+    font-size: 32px;
+    @screen md {
+        font-size: 36px;
+    }
+    @screen lg {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    @screen md {
+        font-size: 32px;
+    }
+    @screen lg {
+        font-size: 34px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    @screen md {
+        font-size: 28px;
+    }
+    @screen lg {
+        font-size: 32px;
+    }
+}
+
+h4 {
+    font-size: 20px;
+    @screen md {
+        font-size: 24px;
+    }
+    @screen lg {
+        font-size: 28px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+p > a {
+    padding: 2px 4px;
+}
+
+a:hover {
+    background-color: var(--hover-bg);
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 > a,
+a:hover {
+    background-color: transparent;
+    padding: 0px;
 }
