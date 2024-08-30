@@ -1,17 +1,34 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 import { getArticleById } from "../utils/getArticleById";
 
 export default function ArticleId() {
     let params = useParams();
     const article = getArticleById(params.articleId);
+    const [markdown, setMarkdown] = useState("");
+
+    useEffect(() => {
+        async function fetchMarkdown() {
+            try {
+                const res = await fetch(
+                    `/articles/article-${params.articleId}.md`
+                );
+                const text = await res.text();
+                setMarkdown(text);
+            } catch (error) {
+                console.error("Failed to fetch Markdown file:", error);
+            }
+        }
+
+        fetchMarkdown();
+    }, [params.articleId]);
 
     return (
-        <div>
+        <div className="content">
             <h2>{article?.title}</h2>
-            <p>{article?.content}</p>
-            <small className="text-zinc-400 leading-none dark:text-zinc-600 text-xs">
-                Last updated: {article?.date}
-            </small>
+            <ReactMarkdown>{markdown}</ReactMarkdown>
+            <small>Last updated: {article?.date}</small>
         </div>
     );
 }

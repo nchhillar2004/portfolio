@@ -130,8 +130,12 @@ h4 > a:hover {
     margin-right: 2px;
 }
 
-.content p {
+.content p, .content ol {
     margin-top: 12px;
+}
+
+.content h4{
+    margin-top: 16px;
 }
 
 .articles h4 > a:hover {
@@ -146,8 +150,7 @@ h4 > a:hover {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-
+    -webkit-line-clamp: 3;
     font-size: 14px;
     @screen md {
         font-size: 15px;
@@ -158,18 +161,30 @@ h4 > a:hover {
     color: grey;
 }
 
-.container{
+.container {
     width: 100%;
-    @screen md{
+    @screen md {
         width: 80%;
     }
-    @screen lg{
+    @screen lg {
         width: 80%;
     }
-    @screen xl{
+    @screen xl {
         width: 70%;
     }
-    @screen 2xl{
+    @screen 2xl {
         width: 60%;
     }
+}
+
+pre {
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 12px 0px;
+    background-color: var(--bg);
+}
+
+ol >li{
+    list-style: disc;
+    list-style-position: inside;
 }
