@@ -16,9 +16,9 @@
     }
 
     .black {
-        --secondary-color: rgb(0, 70, 124);
-        --tertiary-color: rgb(235, 235, 235);
-        --hover-bg: rgb(225, 225, 225);
+        --secondary-color: rgb(0, 66, 116);
+        --tertiary-color: rgb(242, 242, 242);
+        --hover-bg: rgb(220, 220, 222);
         --rounded: 0px;
         --container-bg: rgb(255, 255, 255);
     }
@@ -54,9 +54,9 @@
     }
 
     .black {
-        --secondary-color: rgb(255, 255, 255);
-        --tertiary-color: rgb(20, 20, 20);
-        --hover-bg: rgb(60, 60, 60);
+        --secondary-color: rgb(0, 120, 200);
+        --tertiary-color: rgb(10, 10, 12);
+        --hover-bg: rgb(30, 30, 34);
         --rounded: 0px;
         --container-bg: rgb(0, 0, 0);
     }
@@ -218,6 +218,7 @@ ol > li {
     pre,
     code {
         overflow-y: scroll;
+        font-size: 14px;
     }
 }
 
