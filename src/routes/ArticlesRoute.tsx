@@ -15,13 +15,28 @@ export default function ArticlesRoute() {
                                 Technical Insights
                             </h2>
                             {articles.insights.map((article) => (
-                                <div className="article" key={article.id}>
-                                    <h4>
-                                        <a href={`article/${article.id}`}>
-                                            {article.title}
-                                        </a>
-                                    </h4>
-                                    <p>{article.description}</p>
+                                <div
+                                    className="article mt-4 bg-[var(--bg)] py-2 px-4 rounded-lg"
+                                    key={article.id}
+                                >
+                                    <div className="flex flex-col mb-2">
+                                        <h4>
+                                            <a href={`article/${article.id}`}>
+                                                {article.title}
+                                            </a>
+                                        </h4>
+                                        <div className="badge w-fit bg-[var(--hover-bg)] rounded-md px-2">
+                                            {article?.badge &&
+                                            article.badge.length >= 2 ? (
+                                                <small>{article.badge}</small>
+                                            ) : (
+                                                ""
+                                            )}
+                                        </div>
+                                    </div>
+                                    <p className="text-sm">
+                                        {article.description}
+                                    </p>
                                 </div>
                             ))}
                         </div>
@@ -33,13 +48,28 @@ export default function ArticlesRoute() {
                                 Personal Experience
                             </h2>
                             {articles.experiences.map((article) => (
-                                <div className="article" key={article.id}>
-                                    <h4>
-                                        <a href={`article/${article.id}`}>
-                                            {article.title}
-                                        </a>
-                                    </h4>
-                                    <p>{article.description}</p>
+                                <div
+                                    className="article mt-4 bg-[var(--bg)] py-2 px-4 rounded-lg"
+                                    key={article.id}
+                                >
+                                    <div className="flex flex-col mb-2">
+                                        <h4>
+                                            <a href={`article/${article.id}`}>
+                                                {article.title}
+                                            </a>
+                                        </h4>
+                                        <div className="badge w-fit bg-[var(--hover-bg)] rounded-md px-2">
+                                            {article?.badge &&
+                                            article.badge.length >= 2 ? (
+                                                <small>{article.badge}</small>
+                                            ) : (
+                                                ""
+                                            )}
+                                        </div>
+                                    </div>
+                                    <p className="text-sm">
+                                        {article.description}
+                                    </p>
                                 </div>
                             ))}
                         </div>

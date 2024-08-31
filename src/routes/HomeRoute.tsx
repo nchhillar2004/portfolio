@@ -1,17 +1,27 @@
-
 import { Link } from "react-router-dom";
 
 export default function HomeRoute() {
     return (
         <>
-            <div className="flex flex-wrap space-y-5">
+            <div
+                className="flex flex-wrap space-y-5"
+                itemScope
+                itemType="https://schema.org/Person"
+            >
+                <meta itemProp="name" content="Nishant Chhillar" />
+                <meta itemProp="jobTitle" content="Full Stack Developer" />
                 <div className="flex w-full max-lg:space-y-5 lg:flex-row flex-col justify-between">
-                    <section className="lg:w-[45%] w-full" id="about">
+                    <section
+                        className="lg:w-[45%] w-full"
+                        id="about"
+                        itemScope
+                        itemType="https://schema.org/AboutPage"
+                    >
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Welcome!
                         </h2>
-                        <div className="content">
+                        <div className="content" itemProp="description">
                             <p>
                                 NONE of the content here is AI generated. Hello!
                                 Welcome to my personal portfolio website. My
@@ -105,7 +115,12 @@ export default function HomeRoute() {
                             </p>
                         </div>
                     </section>
-                    <section className="lg:w-[45%] w-full" id="experience">
+                    <section
+                        className="lg:w-[45%] w-full"
+                        id="experience"
+                        itemScope
+                        itemType="https://schema.org/WorkExperience"
+                    >
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Experience
@@ -116,16 +131,21 @@ export default function HomeRoute() {
                                     <a
                                         href="https://digismiths.com/"
                                         target="_blank"
+                                        itemProp="url"
                                     >
                                         Digismiths (Internship)
                                     </a>
                                 </h4>
-                                <div className="flex flex-col">
-                                    <p>Delhi, IN</p>
+                                <div
+                                    className="flex flex-col"
+                                    itemScope
+                                    itemType="https://schema.org/Place"
+                                >
+                                    <p itemProp="addressLocality">Delhi, IN</p>
                                     <small>Apr, 2024 - Jul 2024</small>
                                 </div>
                             </div>
-                            <p>
+                            <p itemProp="description">
                                 Worked as a Full Stack Developer - Intern at
                                 Digismiths, a startup in Delhi. I gained a lot
                                 of real-world experience in coding, teamwork and
@@ -153,26 +173,36 @@ export default function HomeRoute() {
                 </div>
 
                 <div className="flex w-full max-lg:space-y-5 lg:flex-row flex-col justify-between">
-                    <section className="lg:w-[45%] w-full" id="projects">
+                    <section
+                        className="lg:w-[45%] w-full"
+                        id="projects"
+                        itemScope
+                        itemType="https://schema.org/CreativeWork"
+                    >
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Projects
                         </h2>
                         <div className="content">
-                            <p>
+                            <p itemProp="about">
                                 Q & A website like StackOverflow: Next.js,
                                 TypeScript, Next-Auth, JWT, MongoDB Atlas,
                                 Shadcn/ui
                             </p>
-                            <p>Amazon Clone: MERN stack</p>
+                            <p itemProp="about">Amazon Clone: MERN stack</p>
                         </div>
                     </section>
-                    <section className="lg:w-[45%] w-full" id="contact">
+                    <section
+                        className="lg:w-[45%] w-full"
+                        id="contact"
+                        itemScope
+                        itemType="https://schema.org/ContactPage"
+                    >
                         <h2>
                             <span className="mr-2 select-none">&#x2756;</span>
                             Contact
                         </h2>
-                        <div className="content">
+                        <div className="content" itemProp="contactOption">
                             <p>
                                 Looks like you made it this far and want to
                                 contact me.

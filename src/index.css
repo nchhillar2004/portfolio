@@ -55,13 +55,6 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     background-color: var(--bg);
     color: var(--color);
-    font-size: 16px;
-    @screen md {
-        font-size: 17px;
-    }
-    @screen lg {
-        font-size: 18px;
-    }
 }
 
 h1 {
@@ -89,6 +82,10 @@ h3 {
     @screen lg {
         font-size: 22px;
     }
+}
+
+h4 {
+    font-size: 18px;
 }
 
 h1,
@@ -130,20 +127,17 @@ h4 > a:hover {
     margin-right: 2px;
 }
 
-.content p, .content ol {
+.content p,
+.content ol {
     margin-top: 12px;
 }
 
-.content h4{
+.content h4 {
     margin-top: 16px;
 }
 
 .articles h4 > a:hover {
     text-decoration: underline;
-}
-
-.article h4 {
-    margin-top: 12px;
 }
 
 .article p {
@@ -184,7 +178,14 @@ pre {
     background-color: var(--bg);
 }
 
-ol >li{
+ol > li {
     list-style: disc;
     list-style-position: inside;
+}
+
+@media (max-width: 768px) {
+    pre,
+    code {
+        overflow-y: scroll;
+    }
 }

@@ -8,11 +8,15 @@ export default function ArticleId() {
     const article = getArticleById(params.articleId);
     const [markdown, setMarkdown] = useState("");
 
+    if (!article) {
+        return <div>404 | Article not found!</div>;
+    }
+
     useEffect(() => {
         async function fetchMarkdown() {
             try {
                 const res = await fetch(
-                    `https://nchhillar.vercel.app/articles/article-${params.articleId}.md`
+                    `/articles/article-${params.articleId}.md`
                 );
                 const text = await res.text();
                 setMarkdown(text);
@@ -25,10 +29,19 @@ export default function ArticleId() {
     }, [params.articleId]);
 
     return (
-        <div className="content">
-            <h2>{article?.title}</h2>
-            <ReactMarkdown>{markdown}</ReactMarkdown>
-            <small>Last updated: {article?.date}</small>
-        </div>
+        <article
+            className="content"
+            itemScope
+            itemType="https://schema.org/Article"
+        >
+            <h2 itemProp="headline">{article?.title}</h2>
+            <div className="my-4" itemProp="articleBody">
+                <ReactMarkdown>{markdown}</ReactMarkdown>
+            </div>
+            <small>
+                Last updated:{" "}
+                <time itemProp="dateModified">{article?.date}</time>
+            </small>
+        </article>
     );
 }
