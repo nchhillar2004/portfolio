@@ -18,7 +18,7 @@ export default function App() {
 
     return (
         <div className={`${themeColor} lg:py-5 py-3`}>
-            <div className="container min-h-[90vh] lg:py-4 lg:px-8 max-md:py-2 max-md:px-4 py-3 px-6 w-full rounded-xl border border-[var(--border)] bg-[var(--container-bg)]">
+            <div className="container min-h-[90vh] lg:py-4 lg:px-8 max-md:py-2 max-md:px-4 py-3 px-6 w-full rounded-[var(--rounded)] border border-[var(--border)] bg-[var(--container-bg)]">
                 <header className="mb-5 space-y-4">
                     <div className="flex lg:flex-row flex-col">
                         <h1>
@@ -27,7 +27,7 @@ export default function App() {
                         <div className="flex space-x-4 flex-1 flex-wrap items-center justify-end">
                             <ThemeSwitch />
                             <select
-                                className="bg-[var(--container-bg)] outline-none p-1"
+                                className="outline-none p-1"
                                 name="themeColor"
                                 id="themeColor"
                                 value={themeColor}
@@ -39,10 +39,10 @@ export default function App() {
                                     );
                                 }}
                             >
-                                <option value="blue">Blue</option>
-                                <option value="black">Black & White</option>
-                                <option value="red">Red</option>
-                                <option value="green">Green</option>
+                                <option value="blue">Default</option>
+                                <option value="black">Classic</option>
+                                <option value="red">Lava</option>
+                                <option value="green">Earth</option>
                             </select>
                         </div>
                     </div>

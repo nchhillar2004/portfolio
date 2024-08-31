@@ -16,7 +16,7 @@ export default function ArticlesRoute() {
                             </h2>
                             {articles.insights.map((article) => (
                                 <div
-                                    className="article mt-4 bg-[var(--tertiary-color)] py-2 px-4 rounded-lg"
+                                    className="article mt-4 bg-[var(--tertiary-color)] py-2 px-4 rounded-[var(--rounded)]"
                                     key={article.id}
                                 >
                                     <div className="flex flex-col mb-2">
@@ -25,7 +25,7 @@ export default function ArticlesRoute() {
                                                 {article.title}
                                             </a>
                                         </h4>
-                                        <div className="badge w-fit bg-[var(--hover-bg)] rounded-md px-2">
+                                        <div className="badge w-fit bg-[var(--hover-bg)] rounded-[var(--rounded)] px-2">
                                             {article?.badge &&
                                             article.badge.length >= 2 ? (
                                                 <small>{article.badge}</small>
@@ -49,7 +49,7 @@ export default function ArticlesRoute() {
                             </h2>
                             {articles.experiences.map((article) => (
                                 <div
-                                    className="article mt-4 bg-[var(--tertiary-color)] py-2 px-4 rounded-lg"
+                                    className="article mt-4 bg-[var(--tertiary-color)] py-2 px-4 rounded-[var(--rounded)]"
                                     key={article.id}
                                 >
                                     <div className="flex flex-col mb-2">
@@ -58,7 +58,7 @@ export default function ArticlesRoute() {
                                                 {article.title}
                                             </a>
                                         </h4>
-                                        <div className="badge w-fit bg-[var(--hover-bg)] rounded-md px-2">
+                                        <div className="badge w-fit bg-[var(--hover-bg)] rounded-[var(--rounded)] px-2">
                                             {article?.badge &&
                                             article.badge.length >= 2 ? (
                                                 <small>{article.badge}</small>

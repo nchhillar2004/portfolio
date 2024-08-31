@@ -27,7 +27,7 @@ export default function ThemeSwitch() {
 
     return (
         <select
-            className="bg-[var(--container-bg)] outline-none p-1"
+            className="outline-none p-1"
             name="theme"
             id="theme"
             value={theme}
