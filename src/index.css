@@ -165,9 +165,10 @@ h4 > a:hover {
     margin-top: 12px;
 }
 
-.content h4 {
+.content h3, .content h4 {
     margin-top: 16px;
 }
+
 
 .articles h4 > a:hover {
     text-decoration: underline;

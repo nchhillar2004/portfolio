@@ -12,7 +12,8 @@ export const articles = {
         {
             id: 2,
             title: "Best programming languages",
-            description: "",
+            description:
+                "In 2024, the programming landscape continues to evolve with new trends and technologies. Here’s a list of the top 5 programming languages that are making waves this year, along with their standout features.",
             tags: ["programming", "javascript", "python", "java"],
             badge: "new",
             date: "1 Sept, 2024",
@@ -35,7 +36,8 @@ export const articles = {
         {
             id: 4,
             title: "My experience with ROR (Ruby on Rails)",
-            description: "Ruby on rails",
+            description:
+                "Using Ruby on Rails for my project was an interesting journey. Rails made it incredibly easy to set up a dynamic website with features like posts, login, signup, and authentication. With just a few commands, I was able to get these features up and running in minutes. This rapid development was one of the highlights of using Rails.",
             tags: [
                 "web-development",
                 "nextjs",
