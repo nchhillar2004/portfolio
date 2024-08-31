@@ -141,7 +141,7 @@ export default function HomeRoute() {
                                     itemScope
                                     itemType="https://schema.org/Place"
                                 >
-                                    <p itemProp="addressLocality">Delhi, IN</p>
+                                    <i itemProp="addressLocality">Delhi, IN</i>
                                     <small>Apr, 2024 - Jul 2024</small>
                                 </div>
                             </div>
@@ -185,11 +185,51 @@ export default function HomeRoute() {
                         </h2>
                         <div className="content">
                             <p itemProp="about">
+                                Code Eclipse: website for a tech service provider company. (Next.js)
+                                <div className="flex space-x-2">
+                                    <a
+                                        href="https://code-eclipse.vercel.app/"
+                                        target="_blank"
+                                    >
+                                        Live
+                                    </a>
+                                    <a
+                                        href="https://github.com/nchhillar2004/Code-Eclipse"
+                                        target="_blank"
+                                    >
+                                        Source Code
+                                    </a>
+                                </div>
+                            </p>
+                            <p itemProp="about">
                                 Q & A website like StackOverflow: Next.js,
                                 TypeScript, Next-Auth, JWT, MongoDB Atlas,
                                 Shadcn/ui
+                                <div className="flex space-x-2">
+                                    <a
+                                        href="https://campus-overflow-nextjs.vercel.app/questions"
+                                        target="_blank"
+                                    >
+                                        Live
+                                    </a>
+                                    <a
+                                        href="https://github.com/nchhillar2004/campus-overflow"
+                                        target="_blank"
+                                    >
+                                        Source Code
+                                    </a>
+                                </div>
                             </p>
-                            <p itemProp="about">Amazon Clone: MERN stack</p>
+                            <p itemProp="about">Amazon Clone: MERN stack
+                            <div className="flex space-x-2">
+                                    <a
+                                        href="https://github.com/nchhillar2004/Amazon-Clone"
+                                        target="_blank"
+                                    >
+                                        Source Code
+                                    </a>
+                                </div>
+                            </p>
                         </div>
                     </section>
                     <section
