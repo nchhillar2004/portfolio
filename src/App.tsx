@@ -40,6 +40,7 @@ export default function App() {
                                 }}
                             >
                                 <option value="blue">Blue</option>
+                                <option value="black">Black & White</option>
                                 <option value="red">Red</option>
                                 <option value="green">Green</option>
                             </select>

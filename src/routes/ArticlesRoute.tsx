@@ -6,7 +6,7 @@ export default function ArticlesRoute() {
             <h1>Articles</h1>
             <div className="flex">
                 <div className="articles mt-4 w-full">
-                    <div className="flex justify-between lg:flex-row flex-col">
+                    <div className="flex justify-between lg:flex-row flex-col max-lg:space-y-4">
                         <div className="lg:w-[45%]">
                             <h2>
                                 <span className="mr-2 select-none">
@@ -16,7 +16,7 @@ export default function ArticlesRoute() {
                             </h2>
                             {articles.insights.map((article) => (
                                 <div
-                                    className="article mt-4 bg-[var(--bg)] py-2 px-4 rounded-lg"
+                                    className="article mt-4 bg-[var(--tertiary-color)] py-2 px-4 rounded-lg"
                                     key={article.id}
                                 >
                                     <div className="flex flex-col mb-2">
@@ -49,7 +49,7 @@ export default function ArticlesRoute() {
                             </h2>
                             {articles.experiences.map((article) => (
                                 <div
-                                    className="article mt-4 bg-[var(--bg)] py-2 px-4 rounded-lg"
+                                    className="article mt-4 bg-[var(--tertiary-color)] py-2 px-4 rounded-lg"
                                     key={article.id}
                                 >
                                     <div className="flex flex-col mb-2">

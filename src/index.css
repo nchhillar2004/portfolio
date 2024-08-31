@@ -3,45 +3,70 @@
 @tailwind utilities;
 
 :root {
-    --bg: rgb(245, 245, 245);
-    --color: black;
-    --border: rgb(185, 185, 185);
+    --bg: rgb(240, 240, 240);
+    --primary-color: rgb(20, 20, 20);
+    --border: rgb(200, 200, 200);
+
     .blue {
-        --secondary-color: rgb(0, 0, 150);
-        --hover-bg: rgb(200, 200, 255);
+        --secondary-color: rgb(0, 0, 180);
+        --tertiary-color: rgb(235, 235, 235);
+        --hover-bg: rgb(220, 220, 240);
         --container-bg: rgb(255, 255, 255);
     }
-    .red {
-        --secondary-color: rgb(150, 0, 0);
-        --hover-bg: rgb(255, 200, 200);
-        --container-bg: rgb(255, 245, 245);
+
+    .black {
+        --secondary-color: rgb(30, 30, 30);
+        --tertiary-color: rgb(235, 235, 235);
+        --hover-bg: rgb(200, 200, 200);
+        --container-bg: rgb(255, 255, 255);
     }
+
+    .red {
+        --secondary-color: rgb(180, 0, 0);
+        --tertiary-color: rgb(255, 220, 220);
+        --hover-bg: rgb(255, 200, 200);
+        --container-bg: rgb(255, 240, 240);
+    }
+
     .green {
-        --secondary-color: rgb(0, 150, 0);
-        --hover-bg: rgb(200, 255, 200);
-        --container-bg: white;
-        --container-bg: rgb(245, 255, 245);
+        --secondary-color: rgb(30, 180, 30);
+        --tertiary-color: rgb(200, 255, 200);
+        --hover-bg: rgb(140, 255, 140);
+        --container-bg: rgb(240, 255, 240);
     }
 }
 
 [data-theme="dark"] {
-    --bg: rgb(10, 10, 10);
-    --color: white;
-    --border: rgb(70, 70, 70);
+    --bg: rgb(20, 20, 20);
+    --primary-color: rgb(240, 240, 240);
+    --border: rgb(90, 90, 90);
+
     .blue {
-        --secondary-color: rgb(100, 100, 255);
-        --hover-bg: rgb(0, 0, 60);
-        --container-bg: rgb(20, 20, 20);
+        --secondary-color: rgb(80, 80, 255);
+        --tertiary-color: rgb(20, 20, 20);
+        --hover-bg: rgb(0, 0, 100);
+        --container-bg: rgb(40, 40, 40);
     }
+
+    .black {
+        --secondary-color: rgb(255, 255, 255);
+        --tertiary-color: rgb(20, 20, 20);
+        --hover-bg: rgb(60, 60, 60);
+        --container-bg: rgb(40, 40, 40);
+    }
+
     .red {
-        --secondary-color: rgb(255, 100, 100);
-        --hover-bg: rgb(60, 0, 0);
-        --container-bg: rgb(5, 0, 0);
+        --secondary-color: rgb(255, 120, 120);
+        --tertiary-color: rgb(40, 0, 0);
+        --hover-bg: rgb(100, 0, 0);
+        --container-bg: rgb(20, 0, 0);
     }
+
     .green {
-        --secondary-color: rgb(100, 255, 100);
-        --hover-bg: rgb(0, 60, 0);
-        --container-bg: rgb(0, 5, 0);
+        --secondary-color: rgb(120, 255, 120);
+        --tertiary-color: rgb(0, 40, 0);
+        --hover-bg: rgb(0, 100, 0);
+        --container-bg: rgb(0, 20, 0);
     }
 }
 
@@ -54,7 +79,7 @@ html,
 body {
     font-family: Helvetica, Arial, sans-serif;
     background-color: var(--bg);
-    color: var(--color);
+    color: var(--primary-color);
 }
 
 h1 {
@@ -146,9 +171,6 @@ h4 > a:hover {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     font-size: 14px;
-    @screen md {
-        font-size: 15px;
-    }
     @screen lg {
         font-size: 16px;
     }
@@ -175,7 +197,7 @@ pre {
     border-radius: 8px;
     padding: 8px 16px;
     margin: 12px 0px;
-    background-color: var(--bg);
+    background-color: var(--tertiary-color);
 }
 
 ol > li {
