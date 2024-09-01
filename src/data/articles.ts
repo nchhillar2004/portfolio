@@ -30,7 +30,7 @@ export const articles = {
                 "typescript",
                 "full-stack-development",
             ],
-            badge: "upcomming",
+            badge: "My experience of working on a full stack web app over the past two months. I built a Q&A web app using Next.js, TypeScript, and MongoDB, and it was quite a journey. I initially thought that combining Next.js with backend development would make creating a full stack app relatively easy. I envisioned a project with features like real-time question-and-answer interactions, posting, commenting, and user profiles. However, the reality turned out to be much more complex.",
             date: "1 Sept, 2024",
         },
         {
